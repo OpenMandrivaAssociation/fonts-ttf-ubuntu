@@ -11,6 +11,7 @@ URL: http://font.ubuntu.com/
 Source: http://font.ubuntu.com/download/%{pkgname}-%{version}.zip
 BuildRequires: freetype-tools
 BuildArch: noarch
+BuildRequires: fontconfig
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
