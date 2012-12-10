@@ -51,3 +51,14 @@ rm -rf %{buildroot}
 %verify(not mtime) %{_fontdir}/fonts.dir
 %{_fontdir}/fonts.scale
 %{_sysconfdir}/X11/fontpath.d/ttf-ubuntu:pri=50
+
+
+%changelog
+* Tue May 17 2011 Funda Wang <fwang@mandriva.org> 0.70.1-2mdv2011.0
++ Revision: 675578
+- br fontconfig for fc-query used in new rpm-setup-build
+
+* Wed Jan 05 2011 Claudio Matsuoka <claudio@mandriva.com> 0.70.1-1mdv2011.0
++ Revision: 628853
+- imported package fonts-ttf-ubuntu
+
