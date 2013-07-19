@@ -3,12 +3,12 @@
 
 Name: fonts-ttf-ubuntu
 Summary: Ubuntu Font Family
-Version: 0.70.1
-Release: %mkrel 2
+Version: 0.80
+Release: 1
 License: Ubuntu Font Licence 1.0
 Group: System/Fonts/True type
 URL: http://font.ubuntu.com/
-Source: http://font.ubuntu.com/download/%{pkgname}-%{version}.zip
+Source: http://font.ubuntu.com/download/ubuntu-font-family-sources_0.80.orig.tar.gz
 BuildRequires: freetype-tools
 BuildArch: noarch
 BuildRequires: fontconfig
@@ -61,4 +61,5 @@ rm -rf %{buildroot}
 * Wed Jan 05 2011 Claudio Matsuoka <claudio@mandriva.com> 0.70.1-1mdv2011.0
 + Revision: 628853
 - imported package fonts-ttf-ubuntu
+
 
