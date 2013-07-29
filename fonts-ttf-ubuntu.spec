@@ -1,18 +1,17 @@
-%define pkgname ubuntu-font-family
+%define pkgname ubuntu-font-family-sources
 %define _fontdir %{_datadir}/fonts/TTF/ubuntu
 
 Name: fonts-ttf-ubuntu
 Summary: Ubuntu Font Family
-Version: 0.70.1
-Release: %mkrel 2
+Version: 0.80
+Release: 1
 License: Ubuntu Font Licence 1.0
 Group: System/Fonts/True type
 URL: http://font.ubuntu.com/
-Source: http://font.ubuntu.com/download/%{pkgname}-%{version}.zip
+Source: http://font.ubuntu.com/download/%{pkgname}_0.80.orig.tar.gz
 BuildRequires: freetype-tools
 BuildArch: noarch
 BuildRequires: fontconfig
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 The Ubuntu Font Family are a set of matching new libre/open fonts in
@@ -31,7 +30,6 @@ you are expressly encouraged to experiment, modify, share and improve.
 %build
 
 %install
-rm -rf %{buildroot}
 mkdir -p %{buildroot}%{_fontdir}
 install -m 644 *.ttf %{buildroot}%{_fontdir}
 ttmkfdir %{buildroot}%{_fontdir} > %{buildroot}%{_fontdir}/fonts.dir
@@ -40,11 +38,7 @@ mkdir -p %{buildroot}%{_sysconfdir}/X11/fontpath.d/
 ln -s ../../..%{_fontdir} \
 	%{buildroot}%{_sysconfdir}/X11/fontpath.d/ttf-ubuntu:pri=50
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root,-)
 %doc *.txt
 %dir %{_fontdir}
 %{_fontdir}/*.ttf
@@ -61,4 +55,5 @@ rm -rf %{buildroot}
 * Wed Jan 05 2011 Claudio Matsuoka <claudio@mandriva.com> 0.70.1-1mdv2011.0
 + Revision: 628853
 - imported package fonts-ttf-ubuntu
+
 
