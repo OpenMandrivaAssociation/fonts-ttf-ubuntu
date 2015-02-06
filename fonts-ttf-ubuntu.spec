@@ -4,7 +4,7 @@
 Name: fonts-ttf-ubuntu
 Summary: Ubuntu Font Family
 Version: 0.80
-Release: 1
+Release: 2
 License: Ubuntu Font Licence 1.0
 Group: System/Fonts/True type
 URL: http://font.ubuntu.com/
