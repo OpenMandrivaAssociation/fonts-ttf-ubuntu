@@ -3,12 +3,13 @@
 
 Name: fonts-ttf-ubuntu
 Summary: Ubuntu Font Family
-Version: 0.80
-Release: 2
+Version: 0.869
+Release: 1
 License: Ubuntu Font Licence 1.0
 Group: System/Fonts/True type
-URL: http://font.ubuntu.com/
-Source: http://font.ubuntu.com/download/%{pkgname}_0.80.orig.tar.gz
+URL: https://font.ubuntu.com/
+#Source: http://font.ubuntu.com/download/%{pkgname}_0.80.orig.tar.gz
+Source0: https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/fonts-ubuntu/%{version}-0ubuntu1/fonts-ubuntu_%{version}.orig.tar.gz
 BuildRequires: freetype-tools
 BuildArch: noarch
 BuildRequires: fontconfig
@@ -25,7 +26,7 @@ to produce the font family are distributed under an open licence and
 you are expressly encouraged to experiment, modify, share and improve.
 
 %prep
-%setup -q -n %{pkgname}-%{version}
+%autosetup -n fonts-ubuntu-%{version} -p1
 
 %build
 
